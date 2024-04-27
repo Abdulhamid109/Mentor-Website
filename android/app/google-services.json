@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "120120326894",
+    "project_id": "my-mentor-project",
+    "storage_bucket": "my-mentor-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120120326894:android:aa38d282542d84504e51ff",
+        "android_client_info": {
+          "package_name": "com.example.mentor_web"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApc3X3WukhAd4ri-3BZN9VLx72rxtbqPg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
