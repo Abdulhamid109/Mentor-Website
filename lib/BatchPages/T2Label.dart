@@ -31,7 +31,7 @@ class T2Label extends StatelessWidget {
             padding: const EdgeInsets.all(15.0),
             child: InkWell(
               splashColor: Colors.green,
-              onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=> T2Batch(PRN: getStoredPrn,currentUserId: currentUserId,))),
+              onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=> T2Batch(PRN: getStoredPrn,currentUserId: currentUserId,Mentoruid: 'U3dJn2bVfUV1wcktEIrl',))),
               child: Card(
                 elevation: 5,
                 shadowColor: Colors.black,

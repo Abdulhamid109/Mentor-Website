@@ -5,6 +5,7 @@ import 'package:mentor_web/Mentor%20Panel/mentorFeature.dart';
 class MentorHomePage extends StatefulWidget {
   final String Username;
   final String currentUserId;
+  
   const MentorHomePage({super.key,required this.Username,required this.currentUserId});
 
   @override
@@ -28,10 +29,10 @@ class _MentorHomePageState extends State<MentorHomePage> {
       body: Column(
         children: <Widget>[
           
-          Padding(
+          widget.Username=='Mentor1'?Padding(
             padding: const EdgeInsets.all(15.0),
             child: InkWell(
-              onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=> MentorFeatures(batchName:'student-t1',Username: widget.Username,currentUserId:widget.currentUserId ,))),
+              onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=> MentorFeatures(batchName:'student-t1',Username: widget.Username,currentUserId:widget.currentUserId ,studentMessage: "messages-t1",))),
               splashColor: Colors.green,
               child: Card(
                 elevation: 5,
@@ -54,13 +55,14 @@ class _MentorHomePageState extends State<MentorHomePage> {
                 ),
               ),
             ),
-          ),
+          ):Container(),
         
-          Padding(
+          
+          widget.Username=='Mentor2'?Padding(
             padding: const EdgeInsets.all(15.0),
             child: InkWell(
               // onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>T1Batch())),
-              onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=> MentorFeatures(batchName: 'student-t2',Username: widget.Username,currentUserId: widget.currentUserId,))),
+              onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=> MentorFeatures(batchName: 'student-t2',Username: widget.Username,currentUserId: widget.currentUserId,studentMessage: "messages-t2",))),
               splashColor: Colors.green,
               child: Card(
                 elevation: 5,
@@ -83,13 +85,14 @@ class _MentorHomePageState extends State<MentorHomePage> {
                 ),
               ),
             ),
-          ),
+          ):Container(),
         
-          Padding(
+
+          widget.Username=='Mentor3'?Padding(
             padding: const EdgeInsets.all(15.0),
             child: InkWell(
               // onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>T1Batch())),
-              onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=> MentorFeatures(batchName: 'student-t3',Username: widget.Username,currentUserId: widget.currentUserId,))),
+              onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=> MentorFeatures(batchName: 'student-t3',Username: widget.Username,currentUserId: widget.currentUserId,studentMessage: "messages-t3",))),
               splashColor: Colors.green,
               child: Card(
                 elevation: 5,
@@ -112,7 +115,7 @@ class _MentorHomePageState extends State<MentorHomePage> {
                 ),
               ),
             ),
-          )
+          ):Container(),
         
         ],
       ),

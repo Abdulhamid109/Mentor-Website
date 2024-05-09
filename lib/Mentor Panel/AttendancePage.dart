@@ -1,8 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:intl/intl.dart';
 import 'package:mentor_web/pages/loginPageMentor.dart';
 
 class AttendanceList extends StatefulWidget {
@@ -105,7 +103,7 @@ class _AttendanceListState extends State<AttendanceList> {
                           elevation: 5,
                           shadowColor: Colors.red,
                           child: ListTile(
-                            leading: attendance?const CircleAvatar(backgroundColor: Colors.green,):const CircleAvatar(backgroundColor: Colors.black,),
+                            leading: attendance?const CircleAvatar(backgroundColor: Colors.green,):const CircleAvatar(backgroundColor: Colors.red,),
                             title: Text(prnData,style: GoogleFonts.abel(fontSize:20,fontWeight:FontWeight.bold ),),
                             subtitle: Row(
                               mainAxisAlignment: MainAxisAlignment.start,

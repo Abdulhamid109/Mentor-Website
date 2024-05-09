@@ -6,8 +6,9 @@ import 'package:mentor_web/pages/loginPage.dart';
 class T3Batch extends StatefulWidget {
   final String currentUserId;
   final String PRN;
+  final String Mentoruid;
 
-  const T3Batch({Key? key, required this.currentUserId,required this.PRN}) : super(key: key);
+  const T3Batch({super.key, required this.currentUserId,required this.PRN,required this.Mentoruid});
 
   @override
   State<T3Batch> createState() => _T3BatchState();
@@ -103,6 +104,12 @@ class _T3BatchState extends State<T3Batch> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            Text(
+                              messageUid == widget.Mentoruid
+                                  ? 'Mentor'
+                                  : 'Student',
+                              style: const TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
+                            ),
                             Text(
                               messageText,
                               style: TextStyle(

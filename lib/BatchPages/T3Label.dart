@@ -30,7 +30,7 @@ class T3Label extends StatelessWidget {
             padding: const EdgeInsets.all(15.0),
             child: InkWell(
               splashColor: Colors.green,
-              onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=> T3Batch(PRN: getStoredprn,currentUserId: currentUserId,))),
+              onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=> T3Batch(PRN: getStoredprn,currentUserId: currentUserId,Mentoruid: 'nLWTI3hhrGWlKi9eil6V',))),
               child: Card(
                 elevation: 5,
                 shadowColor: Colors.black,
